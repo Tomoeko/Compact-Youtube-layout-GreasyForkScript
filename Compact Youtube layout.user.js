@@ -36,16 +36,16 @@
   var css = `
   /*=== Home screen ===*/
     /*--- Make list of videos narrower and align it to center ---*/
-    ytd-two-column-browse-results-renderer.grid > #primary {
+    /*--- ytd-two-column-browse-results-renderer.grid > #primary {
       width: [fldGWidth]% !important;
       max-width: [fldGWidth]% !important;
-    }
-    ytd-rich-grid-renderer.ytd-two-column-browse-results-renderer {
+    } ---*/
+    /*--- ytd-rich-grid-renderer.ytd-two-column-browse-results-renderer {
       margin: 0 0 !important;
-    }
-    ytd-two-column-browse-results-renderer.grid {
+    } ---*/
+    /*--- ytd-two-column-browse-results-renderer.grid {
       justify-content: center !important;
-    }
+    } ---*/
     /*--- Remove width for channel's grid of videos ---*/
     ytd-two-column-browse-results-renderer.grid:not(.grid-disabled) {
       max-width: 100% !important;
@@ -62,7 +62,7 @@
       margin: 0px !important;
     }
     /*--- Decrease font size of video name ---*/
-    #video-title.ytd-rich-grid-media, #video-title.ytd-rich-grid-slim-media,
+    /*--- #video-title.ytd-rich-grid-media, #video-title.ytd-rich-grid-slim-media,
     .yt-lockup-metadata-view-model-wiz--compact .yt-lockup-metadata-view-model-wiz__title,
     #video-title.ytd-grid-video-renderer,
     h3.ytd-grid-video-renderer,
@@ -72,7 +72,7 @@
       font-weight: 500 !important;
       margin-top: 2px !important;
       padding-right: 10px !important;
-    }
+    } ---*/
     ytm-shorts-lockup-view-model h3 {
       min-height: unset !important;
     }
@@ -84,9 +84,9 @@
       padding: 2px 24px 0 0 !important;
     }
     /*--- Remove avatars ---*/
-    #avatar-container {
+    /*--- #avatar-container {
       display: [fldRemoveHomeAvatar] !important;
-    }
+    } ---*/
     /*--- Decrease font size of latest posts name ---*/
     ytd-post-renderer[uses-compact-lockup] #home-content-text.ytd-post-renderer {
       font-size: 1.3rem !important;
@@ -105,20 +105,20 @@
       order: -1 !important;
     }
     /*--- Decrease size of menu button ---*/
-    ytd-rich-item-renderer button yt-icon, .shortsLockupViewModelHostOutsideMetadataMenu button yt-icon,
+    /*--- ytd-rich-item-renderer button yt-icon, .shortsLockupViewModelHostOutsideMetadataMenu button yt-icon,
     ytd-browse[page-subtype="channels"] ytd-grid-video-renderer button.yt-icon-button > yt-icon {
       position: absolute !important;
       width: 18px !important;
       height: 18px !important;
       margin-right: 0px !important;
       margin-top: 0px !important;
-    }
+    } ---*/
     /*--- Change position of menu button under video ---*/
     /*ytd-rich-item-renderer button.yt-spec-button-shape-next yt-icon, ytd-grid-video-renderer button.yt-icon-button > yt-icon {*/
-    ytd-rich-item-renderer button yt-icon {
+    /*--- ytd-rich-item-renderer button yt-icon {
       top: -1px !important;
       right: 2px !important;
-    }
+    } ---*/
     /*--- Change position of menu button under short ---*/
     .shortsLockupViewModelHostOutsideMetadataMenu button yt-icon {
       top: -3px !important;
@@ -221,25 +221,29 @@
     ytd-browse[page-subtype="channels"] yt-thumbnail-view-model .yt-thumbnail-view-model__image, .yt-thumbnail-view-model {
       height: calc([fldTWidth]px/1.6356) !important;
     }
+    /*--- Remove avatars ---*/
+    /*--- #avatar-container {
+      display: [fldRemoveHomeAvatar] !important;
+    } ---*/
     /*--- Keep aspect ratio for thumbnails on channel's home tab ---*/
     ytd-browse[page-subtype="channels"] .yt-core-image--content-mode-scale-aspect-fill {
       object-fit: unset !important;
     }
     /*--- Decrease size of channel logo ---*/
-    #avatar-container.ytd-rich-grid-media {
+    /*--- #avatar-container.ytd-rich-grid-media {
       height: 20px !important;
       margin-top: 5px !important;
       margin-right: 8px !important;
-    }
-    .yt-spec-avatar-shape--avatar-size-medium {
+    } ---*/
+    /*--- .yt-spec-avatar-shape--avatar-size-medium {
       margin: 0px !important;
       width: 23px !important;
       height: 23px !important;
-    }
-    .yt-spec-avatar-shape__button--button-medium {
+    } ---*/
+    /*--- .yt-spec-avatar-shape__button--button-medium {
       width: 20px !important;
       height: 20px !important;
-    }
+    } ---*/
     /*--- Decrease size of menu button and shift it to the right ---*/
     /*ytd-rich-grid-renderer ytd-menu-renderer .ytd-menu-renderer[style-target="button"],
     #container:not(.ytd-search) ytd-section-list-renderer ytd-shelf-renderer .ytd-menu-renderer[style-target="button"] {
@@ -330,11 +334,11 @@
       margin-top: 10px !important;
     }
     /*--- Font size for channel name and views count ---*/
-    ytd-video-meta-block #byline-container.ytd-video-meta-block, ytd-video-meta-block #metadata-line.ytd-video-meta-block, .badge.ytd-badge-supported-renderer,
+    /*--- ytd-video-meta-block #byline-container.ytd-video-meta-block, ytd-video-meta-block #metadata-line.ytd-video-meta-block, .badge.ytd-badge-supported-renderer,
     ytm-shorts-lockup-view-model > div > div, #metadata-container.ytd-grid-video-renderer:not(.foo), ytd-grid-video-renderer:not([rich-meta]) #metadata-line.ytd-grid-video-renderer {
       font-size: 11px !important;
       line-height: 1.4rem !important;
-    }
+    } ---*/
     /*--- Font size for playlist details ---*/
     .yt-content-metadata-view-model-wiz--medium-text .yt-content-metadata-view-model-wiz__metadata-text,
     .yt-content-metadata-view-model-wiz .yt-content-metadata-view-model-wiz__metadata-text {
@@ -835,7 +839,7 @@
         'type': 'unsigned int',
         'min': 50,
         'max': 300,
-        'default': 193
+        'default': 300
       },
       'fldGWidth': {
         'label': 'Width of videos grid (in percent, default value 80%):',
