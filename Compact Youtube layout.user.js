@@ -6,6 +6,7 @@
 // @homepage      https://greasyfork.org/en/users/309172-max44
 // @match         *://*.youtube.com/*
 // @match         *://*.youtu.be/*
+// @exclude       *://*.youtube.com/feed/history
 // @icon          https://cdn.icon-icons.com/icons2/1488/PNG/512/5295-youtube-i_102568.png
 // @version       2.1.8
 // @license       MIT
@@ -219,7 +220,7 @@
     }
     ytd-browse[page-subtype="channels"] ytd-item-section-renderer ytd-thumbnail, ytd-browse[page-subtype="channels"] yt-collection-thumbnail-view-model,
     ytd-browse[page-subtype="channels"] yt-thumbnail-view-model .yt-thumbnail-view-model__image, .yt-thumbnail-view-model {
-      height: calc([fldTWidth]px/1.6356) !important;
+      height: calc([200px/1.6356) !important;
     }
     /*--- Remove avatars ---*/
     /*--- #avatar-container {
